@@ -28,6 +28,32 @@ void L298N::drive_motors(int speed, int delay_time) {
   delay(delay_time);
 }
 
+void L298N::forward(int speed, int delay_time) {
+  this->setup_motors(HIGH,LOW,HIGH,LOW);
+  this->drive_motors(speed,delay_time);
+}
+
+void L298N::turn_right(int speed, int delay_time) {
+  this->setup_motors(LOW,HIGH,HIGH,LOW);
+  this->drive_motors(speed,delay_time);
+}
+
+void L298N::turn_left(int speed, int delay_time) {
+  this->setup_motors(HIGH,LOW,LOW,HIGH);
+  this->drive_motors(speed,delay_time);
+}
+
+void L298N::backward(int speed, int delay_time) {
+  this->setup_motors(LOW,HIGH,LOW,HIGH);
+  this->drive_motors(speed,delay_time);
+}
+
+void L298N::full_stop(int delay_time) {
+  this->setup_motors(LOW,LOW,LOW,LOW);
+  this->drive_motors(0,delay_time);
+}
+
+
 void L298N::setup_motors(int state1, int state2, int state3, int state4) {
   digitalWrite (_in1, state1);
   digitalWrite (_in2, state2);

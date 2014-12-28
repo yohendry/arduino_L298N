@@ -14,6 +14,11 @@ class L298N
     L298N(int ena, int in1, int in2, int in3, int in4, int enb);
     void drive_motors(int speed, int delay_time);
     void setup_motors(int state1, int state2, int state3, int state4);
+    void forward(int speed, int delay_time);
+    void full_stop(int delay_time);
+    void turn_right(int speed, int delay_time);
+    void turn_left(int speed, int delay_time);
+    void backward(int speed, int delay_time);
   private:
     int _ena;
     int _in1;
