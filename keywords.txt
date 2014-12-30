@@ -1,3 +1,11 @@
 L298N	KEYWORD1
 drive_motors	KEYWORD2
+drive_motor	KEYWORD2
+motors	KEYWORD2
 setup_motors	KEYWORD2
+setup_motor	KEYWORD2
+full_stop	KEYWORD2
+backward	KEYWORD2
+turn_left	KEYWORD2
+turn_right	KEYWORD2
+forward	KEYWORD2
